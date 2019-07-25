@@ -106,20 +106,20 @@
           </div>
           <div class="components-section font-regular">
             <i class="component-status hidden major_outage"></i>
-  		  {{ range Groups }}
-  		    {{ if ne (len .Services) 0 }}
+            {{ range Groups }}
+              {{ if ne (len .Services) 0 }}
                 <div class="components-container one-column">
                   <div class="component-container border-color">
-  				  {{ range VisibleGroupServices . }}
+                    {{ range VisibleGroupServices . }}
                       <a href="#" class="service_li list-group-item list-group-item-action {{if not .Online}}bg-danger text-white{{ end }}" data-id="0">
                         <span class="name">{{ .Name }}</span>
-  				      {{ if .Online }}
+                        {{ if .Online }}
                           <span class="component-status">Online & operational</span>
                           <span class="tool icon-indicator fa fa-check" title="Operational"></span>
-  				      {{ else }}
-  				        <span class="component-status">Offline & unoperational</span>
+                        {{ else }}
+                          <span class="component-status">Offline & unoperational</span>
                           <span class="tool icon-indicator fa fa-check" title="Unoperational"></span>
-  				      {{ end }}
+                        {{ end }}
                         <div class="shared-partial uptime-90-days-wrapper">
                           <div class="legend ">
                             <div class="spacer"></div>
@@ -130,11 +130,11 @@
                           </div>
                         </div>
                       </a>
-  				  {{ end }}
+                    {{ end }}
                   </div>
                 </div>
-  		    {{ end }}
-  		  {{ end }}
+              {{ end }}
+            {{ end }}
           </div>
         </div>
        </div>
@@ -200,7 +200,7 @@
                 {{ else }}
                   <span class="badge bg-danger float-right pulse">OFFLINE</span>
                 {{end}}
-  	  	  </h4>
+              </h4>
   
               <div class="row stats_area mt-5">
                 <div class="col-4">
